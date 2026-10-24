@@ -1,25 +1,75 @@
 aid: enata
+
 name: Enata
-description: 'Enata is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by bowery-capital) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://enata.ai/hero-poster.jpg
+
+description: Enata provides AI-powered solutions for high‑volume go‑to‑market (GTM) teams, turning every customer conversation into actionable
+  account intelligence. Their platform automates research, outreach, and CRM updates, helping sales and marketing teams scale efficiently with
+  real‑time insights and AI‑driven assistance.
+
 url: https://raw.githubusercontent.com/api-evangelist/enata/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
 - Company
-apis: []
+- AI
+- Sales
+- Marketing
+- Automation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- bowery-capital
+
 common:
+- type: Hosts
+  url: hosts/enata-hosts.yml
+- type: Vendors
+  url: vendors/enata-vendors.yml
+- type: PrivacyPolicy
+  url: https://enata.ai/privacy
+- type: Blog
+  url: https://enata.ai/blog
+- type: DomainSecurity
+  url: security/enata-domain-security.yml
 - type: Website
   url: https://enata.ai/
+
+apis:
+- name: Enata API
+  description: Enata provides AI‑powered solutions for high‑volume go‑to‑market teams, automating research, outreach, and CRM updates.
+  humanURL: https://www.enata.ai/docs
+  aid: enata:enata-api
+
+x-backed-by:
+- bowery-capital
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Docs page returns HTML shell with no machine‑readable OpenAPI spec.
+  evidence:
+  - url: https://www.enata.ai/openapi.json
+    status: 200
+  checked: '2026-10-24'
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
